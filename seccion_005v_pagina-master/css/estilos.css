@@ -1,25 +1,9 @@
 
-.navbar-nav {        
+#navbar {
     
-    margin-left: auto;
-    
-}
-
-.navbar-brand {
-
-    border-radius: 10%;
-}
-
-.text {
-
-    height: 40 px;
-}
-
-.container-fluid {
-    
-    padding: 10 px;
-    background-color: #eeededa8;
-    
+    background-color: #86868628;
+    border-radius: 2%;
+        
     
 }
 
@@ -34,4 +18,11 @@
    
 }
 
+#titulo {
 
+    padding-left: 250px;
+}
+
+#marca {
+    
+    }
