@@ -70,7 +70,7 @@
         <!--botones-->
           <div class="d-grid gap-2 d-md-block">
             <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
-            <button class="btn btn-secondary" type="button">Cancelar</button>
+            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
         </div>
       </form>
       
@@ -82,52 +82,80 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>      
-      <script src="btn.js"></script>
+      
       <!--Validaciones-->
-      <script>
-        $('#btn_guardar').click(function(e){
-        //funcion que evita que salga el mensaje solo por clickear
-        e.preventDefault(); 
-        //pero si es valido entonces ..pum!
-        if ($('#formulario').valid()) { 
-        Swal.fire({
-        title: "Su cuenta ha sido creada con exito!",
-        icon: "success"
-      });
-    }
-  });
-        
-        $('#formulario').validate({
-            rules: {
-            inputNombre: "required",
-            inputEmail: {
-            required: true,
-            email: true
-            //requisitos
-            },
-            inputPassword: {
-            required: true,
-            minlength: 8 
-            }
-       
-            //mensaje que muestra si el usuario no ingresa el minimo de requisitos
-        },messages: {
-            inputNombre: "Por favor, Escriba su nombre",
-            inputEmail: {
-            required: "Por favor, Ingrese su correo electronico",
-            inputEmail: "Por favor, Introduzca un correo electronico valido"
-            },
-            inputPassword: {
-            required: "Por favor, Introduzca su contraseña",
-            minlength: "La constraseña debe tener 8 caracteres minimo"
-            }
-            },
-        //funcion que envia el formulario solo si todo está en orden
-        submitHandler: function(form) {
-        form.submit();
-            }
-        });
-      </script>
 
-    </body>
+      <script>
+        $(document).ready(function() {
+            //METODO PARA LLMAR EL SWEETALERT
+            const Swal = window.Swal;
+
+            
+            function validateForm() {
+                $('#formulario').validate({
+                    rules: {
+                        inputNombre: "required",
+                        inputEmail: {
+                            required: true,
+                            email: true
+                        },
+                        inputPassword: {
+                            required: true,
+                            minlength: 8
+                        }
+                    },
+                    messages: {
+                        inputNombre: "Por favor, Escriba su nombre",
+                        inputEmail: {
+                            required: "Por favor, Ingrese su correo electronico",
+                            email: "Por favor, Introduzca un correo electronico valido"
+                        },
+                        inputPassword: {
+                            required: "Por favor, Introduzca su contraseña",
+                            minlength: "La constraseña debe tener 8 caracteres minimo"
+                        }
+                    },
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                });
+            }
+
+            // CONTROLADOR DE BOTONES AL HACER CLIC
+            function buttonClickHandlers() {
+                //SOLO SI TODO ESTA BIEN, ABRE LA ALERTA
+                $('#btn_guardar').click(function(e) {
+                    e.preventDefault();
+                    if ($('#formulario').valid()) {
+                        Swal.fire({
+                            title: "Su cuenta ha sido creada con exito!",
+                            icon: "success"
+                        });
+                    }
+                });
+
+                $('#btn_cancelar').click(function(e) {
+                    Swal.fire({
+                        title: "estas seguro que deseas salir?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        cancelButtonText: "Cancelar",
+                        confirmButtonText: "Salir"
+                    }).then((result) => {
+                        //SI EL USUARIO PRESIONA SALIR , LO DEVUELVE AL INDEX
+                        if (result.isConfirmed) {
+                            window.location.replace("index.html"); // Redirect to index.html
+                        }
+                    });
+                });
+            }
+
+            // Initialize form validation and button click handlers
+            validateForm();
+            buttonClickHandlers();
+        });
+    </script>
+</body>
 </html>
