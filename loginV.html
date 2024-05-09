@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="spa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="index.html"> <img src="https://i.ibb.co/ZX1B4VM/logoolimpic.png" alt="Marca" height=" 60 px"></a>
+          <div> Olimpic</div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded ="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="futbol.html">Futbol</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+              </li>
+              <li class="nav-item" id="Login">
+                <a class="nav-link " href="login.html" aria-current ="page">Login</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>  
+     
+      
+
+    
+    
+    <form id="formulario" class="row g-3" method="post">
+        <h2>Crea una cuenta</h2>
+
+        <div class="col-md-6">
+            <label for="inputName" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="inputNombre" name="inputNombre" >
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Correo electronico</label>
+          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
+        </div>
+
+        <!--botones-->
+          <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
+            <button class="btn btn-secondary" type="button">Cancelar</button>
+        </div>
+      </form>
+      
+
+      
+        <!--importo libreria Jquery-->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <!--importo librery jquery validate -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>      
+      <script src="btn.js"></script>
+      <!--Validaciones-->
+      <script>
+        $('#btn_guardar').click(function(e){
+        //funcion que evita que salga el mensaje solo por clickear
+        e.preventDefault(); 
+        //pero si es valido entonces ..pum!
+        if ($('#formulario').valid()) { 
+        Swal.fire({
+        title: "Su cuenta ha sido creada con exito!",
+        icon: "success"
+      });
+    }
+  });
+        
+        $('#formulario').validate({
+            rules: {
+            inputNombre: "required",
+            inputEmail: {
+            required: true,
+            email: true
+            //requisitos
+            },
+            inputPassword: {
+            required: true,
+            minlength: 8 
+            }
+       
+            //mensaje que muestra si el usuario no ingresa el minimo de requisitos
+        },messages: {
+            inputNombre: "Por favor, Escriba su nombre",
+            inputEmail: {
+            required: "Por favor, Ingrese su correo electronico",
+            inputEmail: "Por favor, Introduzca un correo electronico valido"
+            },
+            inputPassword: {
+            required: "Por favor, Introduzca su contraseña",
+            minlength: "La constraseña debe tener 8 caracteres minimo"
+            }
+            },
+        //funcion que envia el formulario solo si todo está en orden
+        submitHandler: function(form) {
+        form.submit();
+            }
+        });
+      </script>
+
+    </body>
+</html>
