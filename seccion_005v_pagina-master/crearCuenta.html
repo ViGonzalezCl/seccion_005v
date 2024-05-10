@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="spa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olimpic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid " id="navbar">
+      <a class="navbar-brand ms-1" href="index.html"> <img src="https://i.ibb.co/ZX1B4VM/logoolimpic.png" id="marca"
+          height=" 60 px"></a>
+      <div class="container text-center ">
+        <h2 id="titulo">OLYMPIC</h2>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-5 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="futbol.html">Futbol</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+          </li>
+
+          <!--Iniciar sesion pestaña izq-->
+          <div class="btn-IniciarSesion-index">
+            <button class="btn btn-primary d-xxl-none" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+              <span>
+                Ingresar
+                <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+              </span>
+            </button>
+
+            <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+              aria-labelledby="offcanvasResponsiveLabel ">
+              <div class="offcanvas-header">
+
+                <button type="button " class="btn-close" data-bs-dismiss="offcanvas"
+                  data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+
+
+                <!--Formulario inicio de sesion-->
+                <div class="formulario-izq">
+                  <form id="formulario" class="row g-3" method="post">
+
+                    <h2>Iniciar sesión</h2>
+
+                    <label for="inputEmail4" class="form-label">Correo electronico</label>
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail">
+
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+
+
+                    <!--botones-->
+                    <div class="d-grid gap-2 d-md-block">
+                      <button class="btn btn-primary" id="btn_guardar" type="submit">Guardar</button>
+                      <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                    </div>
+
+                    <!--link pag. crear cuenta-->
+                    <h6>¿Aún no tienes una cuenta?</h6>
+                    <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
+                    <!--termino link pag. crear cuenta-->
+                  </form>
+                </div>
+                <!--termino de formulario-->
+              </div>
+            </div>
+          </div>
+          <!--termino clase inicio sesion pestaña izq-->
+  </nav>
+
+  <!--FORMULARIO CREACION DE USUARIO-->
+<main class="Formulario-crearUsuario">
+  <br>
+  <h3>Crear Usuario</h3>
+  <br>
+
+  <form class="row g-3">
+
+    <!-- Input nombre-->
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="validationDefault01"  required>
+    </div>
+
+    <!--input apellido-->
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Apellidos</label>
+      <input type="text" class="form-control" id="validationDefault02"  required>
+    </div>
+
+
+    <div class="col-md-4">
+      <label for="email" class="form-label">Correo Electronico</label>
+      <div class="input-group">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+
+      </div>
+      <div class="invalid-feedback">Ingresa un correo valido</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="validationDefault03" class="form-label">Dirección</label>
+      <input type="text" class="form-control" id="validationDefault03" required>
+    </div>
+
+    <div class="col-md-3">
+      <label for="validationDefault04" class="form-label">Region
+      </label>
+      <select class="form-select" id="validationDefault04" required>
+        <option selected disabled value="">Seleccione...</option>
+        <option>Región de Arica y Parinacota</option>
+        <option> Región de Tarapacá </option>
+        <option> Región de Antofagasta </option>
+        <option> Región de Atacama </option>
+        <option> Región de Coquimbo </option>
+        <option> Región de Valparaíso </option>
+        <option> Región Metropolitana de Santiago </option>
+        <option> Región del Libertador General Bernardo O’Higgins </option>
+        <option> Región del Maule </option>
+        <option> Región del Ñuble </option>
+        <option> Región del Biobío </option>
+        <option> Región de La Araucanía </option>
+        <option> Región de Los Ríos </option>
+        <option> Región de Los Lagos </option>
+        <option> Región de Aysén del General Carlos Ibáñez del Campo</option>
+        <option> Región de Magallanes y la Antártica Chilena </option>
+      </select>      
+    </div>
+
+
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Estoy de acuerdo con los terminos y condiciones
+        </label>
+      </div>
+    </div>
+   
+    <!--Botones-->
+    <div class="col-12">
+      <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
+        <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+      </div>      
+    </div>
+    
+  </form>
+</main>
+  <!--TERMINO DE FORMULARIO-->
+
+
+
+      <!--Importo Librerias -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/sweetalert2.min.js"></script>
+      <script src="js/ionicons/ionicons.esm.js"></script>
+      <script src="js/validation.js"></script>
+      <script src="js/script.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!--importo libreria Jquery-->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <!--importo librery jquery validate -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>      
+      <!--importo galeria ionic icon -->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+      <!--validaiones-->
+<script> 
+$(document).ready(function() {
+  const Swal = window.Swal;
+
+  $('#formulario').validate({
+    rules: {
+      inputNombre: "required",
+      inputEmail: {
+        required: true,
+        email: true
+      },
+      inputPassword: {
+        required: true,
+        minlength: 8
+      }
+    },
+    messages: {
+      inputNombre: "Por favor, Escriba su nombre",
+      inputEmail: {
+        required: "Ingrese su correo electronico",
+        email: "Por favor, Introduzca un correo electronico valido"
+      },
+      inputPassword: {
+        required: "Introduzca su contraseña",
+        minlength: "La constraseña debe tener 8 caracteres minimo"
+      }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+
+  function buttonClickHandlers() {
+    $('#btn_guardar').click(function(e) {
+      e.preventDefault();
+      if ($('#formulario').valid()) {
+        Swal.fire({
+          title: "Su cuenta ha sido creada con exito!",
+          icon: "success"
+        });
+      }
+    });
+
+    $('#btn_cancelar').click(function(e) {
+      Swal.fire({
+        title: "¿Estás seguro que deseas salir?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Salir"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.replace("index.html"); // Redirect to index.html
+        }
+      });
+    });
+  }
+
+  buttonClickHandlers();
+});
+</script>
+
+</body>
+
+</html>
