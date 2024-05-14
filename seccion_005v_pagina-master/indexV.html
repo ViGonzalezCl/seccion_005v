@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+  <body>
+    
+    
+    <!--nav superior-->
+    <div class="menu-superior">
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          
+            <!--boton patalla chica-->
+          <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <!--secciones izquierda-->
+            <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sucursales.html">Sucursales</a>
+                  </li>
+                </ul>
+              </div>
+          
+          <!--Logo Marca-->
+          <a class="navbar-brand order-1 order-md-3" href="#"><img src="img/logo.1.2.png" alt="logoOlimpic"></a>
+          
+          <!--seccion derecha-->
+          <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="catalogotennisraqueta.html">Tenis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalogofutbolbalones.html">Futbol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gym.html">Gimnasio</a>
+              </li>
+              <li class="nav-item">
+                <div class="btn-IniciarSesion-index">
+                    <button type="button" class="btn-link" id="boton-ingresar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                        <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+                    </button>
+        
+                <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+                  aria-labelledby="offcanvasResponsiveLabel ">
+                  <div class="offcanvas-header">
+                    
+                    <button type="button " class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <!--Formulario inicio de sesion-->
+                    <div class="formulario-izq">
+                      <form id="formulario" class="row g-3" method="post">
+                        
+                        <h2>Iniciar sesión</h2> <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+        
+                          <label for="inputEmail4" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
+                      
+                          <label for="inputPassword4" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
+                        
+                
+                        <!--botones-->
+                          <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
+                            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                          </div>
+                        
+                        <!--link pag. crear cuenta-->  
+                        <h6>¿Aún no tienes una cuenta?</h6>
+                        <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
+                        <!--termino link pag. crear cuenta-->  
+                      </form>
+                    </div>
+                    <!--termino de formulario-->
+                  </div>
+                </div>
+              </div>
+              <!--termino clase inicio sesion pestaña izq-->
+              </li>
+            </ul>
+          </div>        
+        </div>
+        </nav>
+        </div>
+    <!--fin nav superior-->
+
+    <!--carrusel-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/xCT6cn8/afiche.jpg" class="d-block w-100" alt="Carrusel1">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>New Arrival!</h5>
+              <p>More epicity only for you.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/K72BZ5q/afiche3.jpg" class="d-block w-100 " alt="Carrusel2">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>Only Soccer</h5>
+              <p>New epic infinity!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/2WBTJvq/Afiche2.jpg" class="d-block w-100 " alt="Carrusel3">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>Wilson is now on the Olimpo</h5>
+              <p>Check the ultimate racket</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+
+    </body>
+</html>
