@@ -1,43 +1,4 @@
 
-#navbar {
-    
-    background-color: #86868628;
-    border-radius: 2%;
-        
-    
-}
-
-.slide {
-
-    margin-top: 50px;
-}
-
-.button {
-
-  margin-left: 50px;
-   
-}
-
-#titulo {
-
-    padding-left: 250px;
-}
-
-#marca {
-    
-}
-
-/* boton externo*/
-.btn-IniciarSesion-index .btn span {
-    display: flex;
-    align-items: center;
-}
- /*Imagen*/     
-.btn-IniciarSesion-index .btn ion-icon {
-    font-size: 1.7rem;
-    margin-left: 0.5rem;
-}
-
 main.Formulario-crearUsuario {
     max-width: 800px;
     margin: 40px auto;
@@ -46,3 +7,26 @@ main.Formulario-crearUsuario {
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+  .menu-superior{
+    text-size-adjust:center ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+.nav-link{
+    font-size: 20px;
+}
+  /*indexV.html*/
+  .navbar-brand img {
+    /*1rem = 16px*/
+    height: 5rem;
+    width: auto;
+  }
+
+  /*boton ingresar*/
+#boton-ingresar{
+    border: none;
+    background-color: transparent;
+    width: 3rem;
+    font-size: 40px;
+}
