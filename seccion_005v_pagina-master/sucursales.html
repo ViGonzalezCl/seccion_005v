@@ -12,83 +12,86 @@
 
 <body>
 
- 
+
 
   <div class="menu-superior">
     <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container-fluid">
-          
-            <!--boton patalla chica-->
-          <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <!--secciones izquierda-->
-            <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
-                <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sucursales.html">Sucursales</a>
-                  </li>
-                </ul>
-              </div>
-          
-          <!--Logo Marca-->
-          <a class="navbar-brand order-1 order-md-3" href="#"><img src="img/logo.1.2.png" alt="logoOlimpic"></a>
-          
-          <!--seccion derecha-->
-          <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="catalogotennisraqueta.html">Tenis</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="catalogofutbolbalones.html">Futbol</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gym.html">Gimnasio</a>
-              </li>
-              <li class="nav-item">
-                <div class="btn-IniciarSesion-index">
-                    <button type="button" class="btn-link" id="boton-ingresar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                        <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
-                    </button>
-        
+      <div class="container-fluid">
+
+        <!--boton patalla chica-->
+        <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--secciones izquierda-->
+        <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sucursales.html">Sucursales</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Logo Marca-->
+        <a class="navbar-brand order-1 order-md-3" href="#"><img src="img/logo.1.2.png" alt="logoOlimpic"></a>
+
+        <!--seccion derecha-->
+        <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="tennis.html">Tenis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="futbol.html">Futbol</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gym.html">Gimnasio</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-IniciarSesion-index">
+                <button type="button" class="btn-link" id="boton-ingresar" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                  <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+                </button>
+
                 <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
                   aria-labelledby="offcanvasResponsiveLabel ">
                   <div class="offcanvas-header">
-                    
-                    <button type="button " class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
-                      aria-label="Close"></button>
+
+                    <button type="button " class="btn-close" data-bs-dismiss="offcanvas"
+                      data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
                     <!--Formulario inicio de sesion-->
                     <div class="formulario-izq">
                       <form id="formulario" class="row g-3" method="post">
-                        
+
                         <h2>Iniciar sesión</h2> <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
-        
-                          <label for="inputEmail4" class="form-label">Correo electronico</label>
-                          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
-                      
-                          <label for="inputPassword4" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
-                        
-                
+
+                        <label for="inputEmail4" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="inputEmail" name="inputEmail">
+
+                        <label for="inputPassword4" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+
+
                         <!--botones-->
-                          <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
-                            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
-                          </div>
-                        
-                        <!--link pag. crear cuenta-->  
+                        <div class="d-grid gap-2 d-md-block">
+                          <button class="btn btn-primary" id="btn_guardar" type="submit">Guardar</button>
+                          <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                        </div>
+
+                        <!--link pag. crear cuenta-->
                         <h6>¿Aún no tienes una cuenta?</h6>
                         <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
-                        <!--termino link pag. crear cuenta-->  
+                        <!--termino link pag. crear cuenta-->
                       </form>
                     </div>
                     <!--termino de formulario-->
@@ -96,15 +99,15 @@
                 </div>
               </div>
               <!--termino clase inicio sesion pestaña izq-->
-              </li>
-            </ul>
-          </div>        
+            </li>
+          </ul>
         </div>
-        </nav>
-        </div>
-    <!--fin nav superior-->
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
+      </div>
+    </nav>
+  </div>
+  <!--fin nav superior-->
+  <div class="row row-cols-2 row-2-cols-2 md-2 g-2 mt-1 me-3 ms-3 ">
+    <div class="col pe-2">
       <div class="card">
         <img src="https://i.ibb.co/vX5BKSB/sucursal1.jpg" class="card-img-top" alt="sucursal1">
         <div class="card-body">
@@ -114,7 +117,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col ps-2">
       <div class="card">
         <img src="https://i.ibb.co/fpJyzD7/sucursal2.jpg" class="card-img-top" alt="sucursal2">
         <div class="card-body">
@@ -124,21 +127,20 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col pe-2">
       <div class="card">
         <img src="https://i.ibb.co/pWp4WSH/sucursal4.jpg" class="card-img-top" alt="sucursal3">
         <div class="card-body">
           <h5 class="card-title">Mall Altura</h5>
-          <p class="card-text">Ubicado en mall Altura. Dirección: Realidad ficticia 999, local 9, Maipú.
-        </div>
+          <p class="card-text">Ubicado en mall Altura. Dirección: Realidad ficticia 999, local 98, Maipú.</div>
       </div>
     </div>
-    <div class="col" id="sucursal4" >
-      <div class="card" >
+    <div class="col ps-2" id="sucursal4">
+      <div class="card">
         <img src="https://i.ibb.co/C93fNcD/sucursal3.jpg" class="card-img-top" alt="sucursal4">
         <div class="card-body">
           <h5 class="card-title">Espacio Urbano Pollett</h5>
-          <p class="card-text">Ubicado en mall espacio Ubano Pollett. Dirección: Lago ranco 36, local 2, Puerto Montt.
+          <p class="card-text">Ubicado en mall espacio Ubano Pollett. Dirección: Lago ranco 36, local 2, Aysén.
           </p>
         </div>
       </div>
