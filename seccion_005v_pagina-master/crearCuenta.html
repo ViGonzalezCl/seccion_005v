@@ -12,91 +12,95 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid " id="navbar">
-      <a class="navbar-brand ms-1" href="index.html"> <img src="https://i.ibb.co/ZX1B4VM/logoolimpic.png" id="marca"
-          height=" 60 px"></a>
-      <div class="container text-center ">
-        <h2 id="titulo">OLYMPIC</h2>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto me-5 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorías
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="futbol.html">Futbol</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="gym.html">Gym</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
-          </li>
-
-          <!--Iniciar sesion pestaña izq-->
-          <div class="btn-IniciarSesion-index">
-            <button class="btn btn-primary d-xxl-none" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-              <span>
-                Ingresar
-                <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
-              </span>
-            </button>
-
-            <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
-              aria-labelledby="offcanvasResponsiveLabel ">
-              <div class="offcanvas-header">
-
-                <button type="button " class="btn-close" data-bs-dismiss="offcanvas"
-                  data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+  <div class="menu-superior">
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          
+            <!--boton patalla chica-->
+          <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <!--secciones izquierda-->
+            <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sucursales.html">Sucursales</a>
+                  </li>
+                </ul>
               </div>
-              <div class="offcanvas-body">
-
-
-                <!--Formulario inicio de sesion-->
-                <div class="formulario-izq">
-                  <form id="formulario" class="row g-3" method="post">
-
-                    <h2>Iniciar sesión</h2>
-
-                    <label for="inputEmail4" class="form-label">Correo electronico</label>
-                    <input type="email" class="form-control" id="inputEmail" name="inputEmail">
-
-                    <label for="inputPassword4" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword" name="inputPassword">
-
-
-                    <!--botones-->
-                    <div class="d-grid gap-2 d-md-block">
-                      <button class="btn btn-primary" id="btn_guardar" type="submit">Guardar</button>
-                      <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+          
+          <!--Logo Marca-->
+          <a class="navbar-brand order-1 order-md-3" href="#"><img src="img/logo.1.2.png" alt="logoOlimpic"></a>
+          
+          <!--seccion derecha-->
+          <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="catalogotennisraqueta.html">Tenis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalogofutbolbalones.html">Futbol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gym.html">Gimnasio</a>
+              </li>
+              <li class="nav-item">
+                <div class="btn-IniciarSesion-index">
+                    <button type="button" class="btn-link" id="boton-ingresar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                        <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+                    </button>
+        
+                <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+                  aria-labelledby="offcanvasResponsiveLabel ">
+                  <div class="offcanvas-header">
+                    
+                    <button type="button " class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <!--Formulario inicio de sesion-->
+                    <div class="formulario-izq">
+                      <form id="formulario" class="row g-3" method="post">
+                        
+                        <h2>Iniciar sesión</h2> <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+        
+                          <label for="inputEmail4" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
+                      
+                          <label for="inputPassword4" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
+                        
+                
+                        <!--botones-->
+                          <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
+                            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                          </div>
+                        
+                        <!--link pag. crear cuenta-->  
+                        <h6>¿Aún no tienes una cuenta?</h6>
+                        <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
+                        <!--termino link pag. crear cuenta-->  
+                      </form>
                     </div>
-
-                    <!--link pag. crear cuenta-->
-                    <h6>¿Aún no tienes una cuenta?</h6>
-                    <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
-                    <!--termino link pag. crear cuenta-->
-                  </form>
+                    <!--termino de formulario-->
+                  </div>
                 </div>
-                <!--termino de formulario-->
               </div>
-            </div>
-          </div>
-          <!--termino clase inicio sesion pestaña izq-->
-  </nav>
+              <!--termino clase inicio sesion pestaña izq-->
+              </li>
+            </ul>
+          </div>        
+        </div>
+        </nav>
+        </div>
+    <!--fin nav superior-->
 
   <!--FORMULARIO CREACION DE USUARIO-->
 <main class="Formulario-crearUsuario">

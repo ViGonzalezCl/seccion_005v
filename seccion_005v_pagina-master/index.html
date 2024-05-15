@@ -1,204 +1,152 @@
 <!doctype html>
-<html lang="spa">
-
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Olimpic</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/estilos.css" type="text/css">
+<html lang="esp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-
-<body>
-
-  
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid " id="navbar">
-      <a class="navbar-brand ms-1" href="index.html"> <img src="https://i.ibb.co/ZX1B4VM/logoolimpic.png" id="marca"
-          height=" 60 px"  ></a>
-      <div class="container text-center ">
-        <h2 id="titulo">OLYMPIC</h2>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto me-5 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorías
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="futbol.html">Futbol</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="gym.html">Gym</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
-          </li>
+  <body>
+    
+    
+    <!--nav superior-->
+    <div class="menu-superior">
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
           
-          <!--Iniciar sesion pestaña izq-->
-          <div class="btn-IniciarSesion-index">
-            <button class="btn btn-primary d-xxl-none" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-              <span>
-                Ingresar
-                <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
-              </span>
-            </button>
-
-        <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
-          aria-labelledby="offcanvasResponsiveLabel ">
-          <div class="offcanvas-header">
-            
-            <button type="button " class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <!--Formulario inicio de sesion-->
-            <div class="formulario-izq">
-              <form id="formulario" class="row g-3" method="post">
-                
-                <h2>Iniciar sesión</h2> 
-
-                  <label for="inputEmail4" class="form-label">Correo electronico</label>
-                  <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
-              
-                  <label for="inputPassword4" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
-                
+            <!--boton patalla chica-->
+          <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <!--secciones izquierda-->
+            <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sucursales.html">Sucursales</a>
+                  </li>
+                </ul>
+              </div>
+          
+          <!--Logo Marca-->
+          <a class="navbar-brand order-1 order-md-3" href="#"><img src="img/logo.1.2.png" alt="logoOlimpic"></a>
+          
+          <!--seccion derecha-->
+          <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="catalogotennisraqueta.html">Tenis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalogofutbolbalones.html">Futbol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gym.html">Gimnasio</a>
+              </li>
+              <li class="nav-item">
+                <div class="btn-IniciarSesion-index">
+                    <button type="button" class="btn-link" id="boton-ingresar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                        <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+                    </button>
         
-                <!--botones-->
-                  <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
-                    <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                <div class="offcanvas-xxl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+                  aria-labelledby="offcanvasResponsiveLabel ">
+                  <div class="offcanvas-header">
+                    
+                    <button type="button " class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+                      aria-label="Close"></button>
                   </div>
+                  <div class="offcanvas-body">
+                    <!--Formulario inicio de sesion-->
+                    <div class="formulario-izq">
+                      <form id="formulario" class="row g-3" method="post">
+                        
+                        <h2>Iniciar sesión</h2> <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
+        
+                          <label for="inputEmail4" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
+                      
+                          <label for="inputPassword4" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
+                        
                 
-                <!--link pag. crear cuenta-->  
-                <h6>¿Aún no tienes una cuenta?</h6>
-                <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
-                <!--termino link pag. crear cuenta-->  
-              </form>
+                        <!--botones-->
+                          <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
+                            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
+                          </div>
+                        
+                        <!--link pag. crear cuenta-->  
+                        <h6>¿Aún no tienes una cuenta?</h6>
+                        <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
+                        <!--termino link pag. crear cuenta-->  
+                      </form>
+                    </div>
+                    <!--termino de formulario-->
+                  </div>
+                </div>
+              </div>
+              <!--termino clase inicio sesion pestaña izq-->
+              </li>
+            </ul>
+          </div>        
+        </div>
+        </nav>
+        </div>
+    <!--fin nav superior-->
+
+    <!--carrusel-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/xCT6cn8/afiche.jpg" class="d-block w-100" alt="Carrusel1">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>New Arrival!</h5>
+              <p>More epicity only for you.</p>
             </div>
-            <!--termino de formulario-->
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/K72BZ5q/afiche3.jpg" class="d-block w-100 " alt="Carrusel2">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>Only Soccer</h5>
+              <p>New epic infinity!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/2WBTJvq/Afiche2.jpg" class="d-block w-100 " alt="Carrusel3">
+            <div class="carousel-caption d-none d-sm-block">
+              <h5>Wilson is now on the Olimpo</h5>
+              <p>Check the ultimate racket</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!--termino clase inicio sesion pestaña izq-->
-  </nav>
-
-
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://i.ibb.co/xCT6cn8/afiche.jpg" class="d-block w-100" alt="Carrusel1">
-        <div class="carousel-caption d-none d-sm-block">
-          <h5>New Arrival!</h5>
-          <p>More epicity only for you.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.ibb.co/K72BZ5q/afiche3.jpg" class="d-block w-100 " alt="Carrusel2">
-        <div class="carousel-caption d-none d-sm-block">
-          <h5>Only Soccer</h5>
-          <p>New epic infinity!</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.ibb.co/2WBTJvq/Afiche2.jpg" class="d-block w-100 " alt="Carrusel3">
-        <div class="carousel-caption d-none d-sm-block">
-          <h5>Wilson is now on the Olimpo</h5>
-          <p>Check the ultimate racket</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-
-  <div class="container">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-      <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-        </a>
-        <p class="text-muted">© 2024 Company, Inc</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
-      <div class="col mb-3">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
 
-      </div>
-
-      <div class="col mb-3">
-        <h5>Nosotros</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">¿Quiénes Sómos?</a></li>
-          <li class="nav-item mb-2"><a href="sucursales.html" class="nav-link p-0 text-muted">Nuestras Tiendas</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Politicas de Privacidad</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Atención Cliente</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cambios y Devoluciones</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Métodos de pago</a></li>
-          <li class="nav-item mb-2"><a href="contacto.html" class="nav-link p-0 text-muted">Contáctanos</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Legal</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Términos y Condiciones</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bases Legales</a></li>
-        </ul>
-      </div>
-
-      <!--IMPORTAR LIBRERIA-->
-      <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!--importo libreria Jquery-->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-      <!--importo librery jquery validate -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>      
-      <!--importo galeria ionic icon -->
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      <!--carpeta-->
-      <script src="js/boton.js"></script>
-      <script src="js/validacion.js"></script>
-</body>
-
+    </body>
 </html>
