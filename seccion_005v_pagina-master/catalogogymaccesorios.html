@@ -69,31 +69,32 @@
                       aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    <!--Formulario inicio de sesion-->
-                    <div class="formulario-izq">
-                      <form id="formulario" class="row g-3" method="post">
-                        
-                        <h2>Iniciar sesión</h2> <ion-icon name="person-circle-outline" class="ms-2"></ion-icon>
-        
-                          <label for="inputEmail4" class="form-label">Correo electronico</label>
-                          <input type="email" class="form-control" id="inputEmail" name="inputEmail" >
-                      
-                          <label for="inputPassword4" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
-                        
-                
-                        <!--botones-->
-                          <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary"  id="btn_guardar" type="submit">Guardar</button>
-                            <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
-                          </div>
-                        
-                        <!--link pag. crear cuenta-->  
-                        <h6>¿Aún no tienes una cuenta?</h6>
-                        <p><a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
-                        <!--termino link pag. crear cuenta-->  
-                      </form>
-                    </div>
+                   <!--Formulario inicio de sesion-->
+<div class="login-container">
+  <div class="login-form">
+    <form id="login-form" method="post">
+      <h2>Iniciar sesión <ion-icon name="person-circle-outline" class="ms-2" style="font-size: 50px;"></ion-icon></h2>
+
+      <div class="form-group">
+        <label for="inputEmail" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword" name="inputPassword" required>
+      </div>
+
+      <!-- buttons -->
+      <div class="button-group">
+        <button class="btn btn-primary" id="btn_guardar" type="submit">Ingresar</button>
+
+
+      <!-- link to create account page -->
+      <p class="create-account">¿Aún no tienes una cuenta? <a href="crearCuenta.html" class="link-blue">Crear una cuenta</a></p>
+    </form>
+  </div>
+</div>
                     <!--termino de formulario-->
                   </div>
                 </div>
