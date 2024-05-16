@@ -110,40 +110,47 @@
     <br>
     <h3>Crear Usuario</h3>
     <br>
-
-    <form class="row g-3">
-
+  
+    <form class="row g-3" id="crear-usuario-form">
+  
       <!-- Input nombre-->
       <div class="col-md-4">
-        <label for="validationDefault01" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="validationDefault01" required>
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
       </div>
-
+  
       <!--input apellido-->
       <div class="col-md-4">
-        <label for="validationDefault02" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="validationDefault02" required>
+        <label for="apellido" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" required>
       </div>
-
-
+  
       <div class="col-md-4">
         <label for="email" class="form-label">Correo Electronico</label>
         <div class="input-group">
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
         </div>
-        <div class="invalid-feedback">Ingresa un correo valido</div>
+        <div class="invalid-feedback" aria-live="polite">Ingresa un correo valido</div>
       </div>
-
+  
+      <div class="col-md-4">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="confirm-password" class="form-label">Confirme su contraseña</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+      </div>
+  
       <div class="col-md-6">
-        <label for="validationDefault03" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="validationDefault03" required>
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" required>
       </div>
-
+  
       <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Region
-        </label>
-        <select class="form-select" id="validationDefault04" required>
+        <label for="region" class="form-label">Region</label>
+        <select class="form-select" id="region" name="region" required>
           <option selected disabled value="">Seleccione...</option>
           <option>Región de Arica y Parinacota</option>
           <option> Región de Tarapacá </option>
@@ -163,28 +170,28 @@
           <option> Región de Magallanes y la Antártica Chilena </option>
         </select>
       </div>
-
-
-
+  
       <div class="col-12">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-          <label class="form-check-label" for="invalidCheck2">
+          <input class="form-check-input" type="checkbox" value="" id="terminos" name="terminos" required>
+          <label class="form-check-label" for="terminos">
             Estoy de acuerdo con los terminos y condiciones
           </label>
         </div>
       </div>
-
-      <!--Botones-->
+  
+  <!--Botones-->
       <div class="col-12">
         <div class="d-grid gap-2 d-md-block">
           <button class="btn btn-primary" id="btn_guardar" type="submit">Guardar</button>
           <button class="btn btn-secondary" id="btn_cancelar" type="button">Cancelar</button>
         </div>
       </div>
-
     </form>
   </main>
+  
+  
+  
   <!--TERMINO DE FORMULARIO-->
 
 
