@@ -130,3 +130,9 @@ form .link-blue:hover {
 color: #23527c;
 text-decoration: underline;
 }
+
+#Container-contacto {
+
+  background-color: rgb(243, 238, 238)
+  ;
+}
